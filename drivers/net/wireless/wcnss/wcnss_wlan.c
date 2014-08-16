@@ -1380,6 +1380,12 @@ static struct platform_driver wcnss_ctrl_driver = {
 	.remove	= wcnss_ctrl_remove,
 };
 
+void wcnss_get_monotonic_boottime(struct timespec *ts)
+{
+	get_monotonic_boottime(ts);
+}
+EXPORT_SYMBOL(wcnss_get_monotonic_boottime);
+
 struct device *wcnss_wlan_get_device(void)
 {
 	if (penv && penv->pdev && penv->smd_channel_ready)
