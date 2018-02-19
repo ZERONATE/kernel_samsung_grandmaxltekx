@@ -15,6 +15,7 @@ proc-y	+= consoles.o
 proc-y	+= cpuinfo.o
 proc-y	+= devices.o
 proc-y	+= interrupts.o
+proc-y	+= kernel_ver.o
 proc-y	+= loadavg.o
 proc-y	+= meminfo.o
 proc-y	+= stat.o
