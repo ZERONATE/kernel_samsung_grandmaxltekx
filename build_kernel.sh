@@ -3,6 +3,7 @@
 
 export ARCH=arm
 export CROSS_COMPILE=/opt/toolchains/arm-eabi-4.7/bin/arm-eabi-
+export SPEEDY_KERNEL_VERSION=1.0
 mkdir output
 
 echo "Start build kernel..."

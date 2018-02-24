@@ -63,6 +63,7 @@ UTS_VERSION="$UTS_VERSION $CONFIG_FLAGS $TIMESTAMP"
 
 UTS_LEN=64
 UTS_TRUNCATE="cut -b -$UTS_LEN"
+SPEEDY_KERNEL_VERSION="$SPEEDY_KERNEL_VERSION"
 
 # Generate a temporary compile.h
 
@@ -72,6 +73,8 @@ UTS_TRUNCATE="cut -b -$UTS_LEN"
   echo \#define UTS_MACHINE \"$ARCH\"
 
   echo \#define UTS_VERSION \"`echo $UTS_VERSION | $UTS_TRUNCATE`\"
+
+  echo \#define SPEEDY_KERNEL_VERSION \"`echo $SPEEDY_KERNEL_VERSION`\"
 
   echo \#define LINUX_COMPILE_BY \"`echo $LINUX_COMPILE_BY | $UTS_TRUNCATE`\"
   echo \#define LINUX_COMPILE_HOST \"`echo $LINUX_COMPILE_HOST | $UTS_TRUNCATE`\"

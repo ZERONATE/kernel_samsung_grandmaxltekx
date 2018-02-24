@@ -2,10 +2,11 @@
 #include <linux/init.h>
 #include <linux/proc_fs.h>
 #include <linux/seq_file.h>
+#include <generated/compile.h>
 
 static int kernel_ver_proc_show(struct seq_file *m, void *v)
 {
-	seq_printf(m, "1.0");
+	seq_printf(m, "%s", SPEEDY_KERNEL_VERSION);
 	return 0;
 }
 
