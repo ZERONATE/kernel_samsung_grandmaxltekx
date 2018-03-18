@@ -9,6 +9,7 @@ mkdir output
 echo "Start build kernel..."
 
 make -C $(pwd) O=output msm8916_sec_defconfig VARIANT_DEFCONFIG=msm8916_sec_grandmax_koropen_defconfig SELINUX_DEFCONFIG=selinux_defconfig
+sed -i s/-SpeedY-Kernel/-SpeedY-Kernel-${SPEEDY_KERNEL_VERSION}/g $(pwd)/output/.config
 make -j16 -C $(pwd) O=output
 
 cp $(pwd)/output/arch/arm/boot/zImage $(pwd)/utilities/AnyKernel2/zImage
